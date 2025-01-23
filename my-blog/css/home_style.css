@@ -1,60 +1,46 @@
-/* Basic Reset */
-body, h1, h2, h3, p, ul, li, nav, header, footer, section, img {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f6f3;
+    font-family: 'Montserrat', sans-serif;
+    background: #f4f4f4;
     color: #333;
-    line-height: 1.6;
 }
 
 header {
-    background-color: #004d40;
+    background-color: #8bc34a;
     color: white;
-    padding: 20px 10%;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.intro {
+    background: #cddc39;
+    padding: 20px;
     text-align: center;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-.feature-img {
-    width: 100%;
-    height: auto;
-}
-
-.intro, .research, .experience, .education, .hobbies {
-    padding: 20px 10%;
+section {
     background: white;
-    margin: 20px auto;
-    width: 80%;
+    padding: 20px;
+    border: 1px solid #ccc;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.research, .education {
-    background-color: #e8f5e9;
-}
-
 footer {
-    text-align: center;
-    padding: 20px 10%;
-    background-color: #004d40;
+    background-color: #8bc34a;
     color: white;
+    text-align: center;
+    padding: 20px;
 }
