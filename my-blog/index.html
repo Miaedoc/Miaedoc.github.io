@@ -1,43 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to My Creative Academic World</title>
-    <link rel="stylesheet" href="/my-blog/css/home_style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yanting Cao - Academic Profile</title>
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sriracha&family=Open+Sans:wght@300;400;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome for icons (optional) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-..."
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/my-blog/css/styles.css"/>
 </head>
 <body>
-    <header>
-        <h1>My Academic Journey</h1>
-    </header>
-    <div class="intro">
-        <p>Hello, I'm [Your Name], diving deep into the wonders of computational social science.</p>
-    </div>
-    <div class="container">
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Learn more about my background and my passion for research.</p>
-        </section>
-        <section id="research">
-            <h2>Research Interests</h2>
-            <p>Exploring the interplay between technology and social behavior.</p>
-        </section>
-        <section id="publications">
-            <h2>Publications</h2>
-            <ul>
-                <li><a href="#">Article Title One</a></li>
-                <li><a href="#">Article Title Two</a></li>
-            </ul>
-        </section>
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
-        </section>
-    </div>
-    <footer>
-        <p>Copyright © Your Name. All Rights Reserved.</p>
-    </footer>
-    <script src="script.js"></script>
+  <!-- Header / Navigation -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#interests">Research Interests</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#research">Research Experience</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Sidebar -->
+  <aside>
+    <img src="/my-blog/assets/images/profile.jpg" alt="Profile Photo" class="profile-photo"/>
+    <h3>Contact</h3>
+    <p><b>Email:</b> <a href="mailto:ytcao@seu.edu.cn">ytcao@seu.edu.cn</a></p>
+    <p><b>Phone:</b> +86-13013949218</p>
+    <p><b>Address</b>: Southeast University, Nanjing, Jiangsu, China</p>
+
+    <!-- 下载简历按钮 -->
+    <button class="resume-button" onclick="window.open('resume.pdf', '_blank')">
+      Download Resume
+    </button>
+
+    <!-- Skills with progress bars -->
+    <h3>Skills</h3>
+    <ul class="skill-bars">
+      <li>
+        <span>Python</span>
+        <div class="progress-container">
+          <div class="progress" style="width: 90%"></div>
+        </div>
+      </li>
+      <li>
+        <span>JavaScript</span>
+        <div class="progress-container">
+          <div class="progress" style="width: 75%">75%</div>
+        </div>
+      </li>
+      <li>
+        <span>Data Analysis</span>
+        <div class="progress-container">
+          <div class="progress" style="width: 85%">85%</div>
+        </div>
+      </li>
+      <!-- 继续添加更多技能 -->
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <main>
+    <!-- About Me -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        My name is Yanting Cao. I am currently pursuing an M.Sc. in Electronic Information
+        at Southeast University. I am passionate about multiagent modeling and
+        computational social science. I aim to understand how “participatory news”
+        reshapes narratives and frames during dissemination, and how users update
+        their opinions.
+        <!-- 这里可以放你个人的简短自我介绍或更多背景故事 -->
+      </p>
+    </section>
+
+    <!-- Research Interests -->
+    <section id="interests">
+      <h2>Research Interests</h2>
+      <p>
+        Recently, social media platforms have become a primary source of news. Narratives
+        from non-professional users, however, not only distort information but also evolve
+        during news production and dissemination...
+        <!-- 将CV中 RESEARCH INTERESTS 段落的主要内容继续放到这里 -->
+      </p>
+      <div class="icon-container">
+        <div class="icon-item">
+          <i class="fas fa-laptop-code"></i>
+          <span>Computation</span>
+        </div>
+        <div class="icon-item">
+          <i class="fas fa-users"></i>
+          <span>Society</span>
+        </div>
+        <div class="icon-item">
+          <i class="fas fa-project-diagram"></i>
+          <span>Social Networks</span>
+        </div>
+        <div class="icon-item">
+          <i class="fas fa-database"></i>
+          <span>Data Mining</span>
+        </div>
+        <div class="icon-item">
+          <i class="fas fa-robot"></i>
+          <span>Agent-Based</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education">
+      <h2>Education</h2>
+      <p>
+        <strong>09/2021 - 06/2024</strong>: M.Sc. in Electronic Information, Southeast University
+        (GPA: 82.02/100) <br/>
+        Thesis Title: Collaborative Learning Group Formation Methods Considering Motivation Evolution
+        <br/>Grade: 94(A) & 84(A) from reviewers. Ranked 1st/9 in thesis defense panel.
+      </p>
+      <p>
+        <strong>09/2016 - 07/2020</strong>: B.E. in Electronic and Information Engineering,
+        China University of Mining and Technology (GPA: 3.61/4)
+      </p>
+      <!-- 如果有更多教育经历可继续添加 -->
+    </section>
+
+    <!-- Research Experience -->
+    <section id="research">
+      <h2>Research Experience</h2>
+      <p>
+        <strong>07/2024 - Present</strong>: Research Assistant <br/>
+        Focus on Multiagent Modeling on Diffusion in Multiplex Social Networks...
+      </p>
+      <p>
+        <strong>09/2021 - 06/2024</strong>: Research Assistant <br/>
+        Focus on Collaborative Learning Group Formation in Social Networks...
+      </p>
+      <p>
+        <strong>01/2020 - 06/2020</strong>: Undergraduate Thesis Project <br/>
+        Title: Data Analysis and Processing of Recruitment Website Based on Python...
+      </p>
+
+      <!-- Carousel with images -->
+      <div class="carousel">
+        <div class="carousel-track-container">
+          <ul class="carousel-track">
+            <li class="carousel-slide">
+              <img src="images/research1.jpg" alt="Research 1" />
+              <div class="slide-caption">
+                <h3>Research Project 1</h3>
+                <p>Brief explanation about this image and project.</p>
+              </div>
+            </li>
+            <li class="carousel-slide">
+              <img src="images/research2.jpg" alt="Research 2" />
+              <div class="slide-caption">
+                <h3>Research Project 2</h3>
+                <p>More details about your research on multiagent modeling.</p>
+              </div>
+            </li>
+            <!-- ...添加更多slide以展示更多图 -->
+          </ul>
+        </div>
+        <button class="carousel-button prev-button" aria-label="Previous Slide">
+          &#10094;
+        </button>
+        <button class="carousel-button next-button" aria-label="Next Slide">
+          &#10095;
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Yanting Cao. All Rights Reserved.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="/my-blog/js/script.js"></script>
 </body>
 </html>

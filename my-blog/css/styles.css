@@ -1,0 +1,271 @@
+/* 颜色、字体等全局变量 */
+:root {
+  --main-green: #ABD0CE;        /* 主色，灰绿色 */
+  --green-light: #8dbfa3;
+  --green-dark: #7C7877;
+  --accent-pink: #F0E5DE;       /* 粉色/浅红 */
+  --accent-red: #7C7877;
+  --text-dark: #333;
+  --bg-light: #D9D4CF;
+
+  /* 透明背景示例 */
+  --sidebar-bg: rgba(200, 200, 200, 0.8);   /* 侧边栏：浅灰+透明 */
+  --section-bg: rgba(171, 208, 206, 0.8);   /* 分区：淡绿色+透明 */
+}
+
+/* 去除默认边距与通用设置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  margin:0;
+  padding:0;
+  font-family: 'Open Sans', 'sans-serif';
+  color: var(--text-dark);
+  background-image: url("/my-blog/assets/images/bg.jpg") ;
+  background-size: cover;
+  background-color: transparent;
+  line-height: 1.6;
+}
+
+/* 标题字体使用手写风格 Sriracha */
+h1, h2, h3 {
+  font-family: 'Sriracha', cursive;
+  color: var(--green-dark);
+}
+
+/* Header带背景图片（叶子图片） */
+header {
+  /*background: url("/my-blog/assets/images/green-pattern.jpg") no-repeat center center;*/
+  background-color: var(--bg-light);
+  background-size: cover;
+  color: var(--accent-red);
+  padding: 1rem;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header nav ul {
+  list-style: none;
+}
+
+header nav ul li {
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: var(--accent-red);
+  font-weight: 600;
+}
+
+/* 侧边栏 */
+aside {
+  position: fixed;
+  top: 50px; /* 与header保持距离 */
+  left: 0;
+  width: 240px;
+  background: var(--sidebar-bg);
+  color: #000;
+  padding: 1.5rem;
+  height: calc(100% - 70px);
+  overflow-y: auto;
+}
+
+aside .profile-photo {
+  width: 100%;
+  border-radius: 100%;
+  margin-bottom: 2rem;
+}
+
+aside h3 {
+  font-family: 'Sriracha', cursive;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* 下载简历按钮 */
+.resume-button {
+  background-color: var(--accent-pink);
+  color: white;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 1rem;
+  transition: background-color 0.3s;
+}
+
+.resume-button:hover {
+  background-color: var(--bg-light);
+}
+
+/* 技能进度条列表 */
+.skill-bars {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.skill-bars li {
+  margin-bottom: 1rem;
+}
+
+.skill-bars li span {
+  display: inline-block;
+  width: 100px;
+  font-weight: 500;
+}
+
+.progress-container {
+  display: inline-block;
+  background-color: #ddd;
+  width: 100px;
+  height: 15px;
+  border-radius: 10px;
+  margin-left: 10px;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.progress {
+  background-color: var(--bg-light);
+  height: 100%;
+  text-align: right;
+  color: #fff;
+  padding-right: 5px;
+  box-sizing: border-box;
+  line-height: 15px;
+  border-radius: 10px 0 0 10px;
+}
+
+/* 主体内容 */
+main {
+  margin-left: 240px;
+  padding: 2rem 1rem;
+}
+
+/* 分区采用淡绿色透明背景 + 阴影 */
+section {
+  background: var(--section-bg);
+  border-radius: 6px;
+  margin-bottom: 2.5rem;
+  padding: 1.6rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+section:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.18);
+}
+
+/* 研究兴趣里的图标 */
+.icon-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.icon-item {
+  background-color: var(--main-green);
+  box-shadow:0 4px 8px rgba(0,0,0,0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  width: 130px;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.icon-item:hover {
+  background-color: var(--accent-pink);
+}
+
+.icon-item i {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Carousel */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 600px;
+  margin: 1rem auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.carousel-track-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.carousel-slide img {
+  width: 100%;
+  display: block;
+}
+
+.slide-caption {
+  background-color: rgba(255,255,255,0.8);
+  padding: 0.5rem;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--accent-pink);
+  color: #fff;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.2rem 0.6rem;
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+.carousel-button:hover {
+  opacity: 1;
+}
+
+.prev-button {
+  left: 10px;
+}
+
+.next-button {
+  right: 10px;
+}
+
+/* Footer */
+footer {
+  background: var(--bg-light); /* 或者换成一张半透明的图案等 */
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
